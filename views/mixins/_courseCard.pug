@@ -6,7 +6,7 @@ mixin courseCard(course = {fields: {title: '', description: '', categories: [], 
       if(course.fields.categories)
         each category in course.fields.categories
           .course-card__category
-            a.course-card__category-link(href=`/courses/categories/${category.fields.slug}${queryString}`) #{category.fields.title}
+            a.course-card__category-link(href=`/courses/categories/${category.fields.slug}${queryString}`) "Hello Raziq."
     h2.course-card__title
       a(href=`/courses/${course.fields.slug}${queryString}`)= course.fields.title
       if currentApi.id === 'cpa' && (course.draft || course.pendingChanges)
